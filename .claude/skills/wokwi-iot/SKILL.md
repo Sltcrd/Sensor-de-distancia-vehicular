@@ -41,3 +41,11 @@ C01 Application service layer: todos los servicios, interfaz de cada uno, alinea
 ## Convenciones del repo
 - Gitflow, conventional commits, historial ordenado, sin coautor en los commits.
 - Probar en local antes de subir; no subir a producción sin aprobación del dueño.
+
+## Lecciones de la solución de referencia (PC2 2024-2, Moen, nota 17,5)
+- Entrega: un `.zip` del proyecto Wokwi y un `.pptx` con la Pregunta 1, la URL del proyecto, el código de cada archivo (`sketch.ino`, `diagram.json`, `libraries.txt` y cada clase) y una captura del Library Manager.
+- La solución de referencia usó un Device que agrupa SensorManager, ActuatorManager y StateManager, con las librerías `WiFi` y `Time`. Al iniciar mostró la empresa y el nombre del developer, y reportó distancia y estado de la válvula cada 2,5 s.
+- Pregunta 1 de referencia: cinco servicios (monitoreo de uso de agua, control de válvula, configuración del dispositivo, mantenimiento y soporte, uso del agua), con interfaz móvil y desktop y datos del caso (umbral 10 cm, 5 s).
+- Para superar esa nota: cubrir todos los servicios que el caso implica con su tipo de interfaz, implementar lo que el caso nombre aunque ninguna regla dependa de ello (por ejemplo WiFi), mostrar modos de operación y cambios de estado en consola, y mantener title blocks y nombres en inglés en todos los archivos.
+- Wokwi: el simulador de distancia del HC-SR04 usa 340 m/s (58,82 µs por cm de ida y vuelta); redondear la distancia a cm enteros evita que 10 cm nominales se lean como 9,9.
+
