@@ -1,2 +1,0 @@
-# Wokwi Library List
-# No external libraries needed
