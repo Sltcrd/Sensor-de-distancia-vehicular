@@ -1,0 +1,27 @@
+Application Service Layer Requirements - Cia Steel Faucet (Moen, inc.)
+Usuario final: persona que usa el grifo y la app Moen Smart Water.
+
+S1. Grifo sin contacto
+  Interfaz: IoT Device (LED azul y valvula)
+  LED azul encendido si hay manos a menos de 10 cm. La valvula abre 5 s con flujo
+  maximo de 1,2 gpm (4,5 L/min) a 60 psi y luego cierra.
+
+S2. Monitoreo del dispositivo
+  Interfaz: Movil (Android/iOS)
+  Proximidad en cm y estado de la valvula (open/closed), refrescados cada 2,5 s.
+  Estado de conexion WiFi y aviso si el sensor falla.
+
+S3. Configuracion remota
+  Interfaz: Movil
+  Editar el umbral de proximidad (por defecto 10 cm) y el tiempo de apertura
+  (por defecto 5 s). Se aplica al dispositivo por WiFi.
+
+S4. Emparejamiento
+  Interfaz: Movil
+  Descubre los dispositivos disponibles en la red WiFi, los empareja y los lista
+  con su estado.
+
+S5. Seguimiento de consumo
+  Interfaz: Movil
+  Litros por activacion (aprox. 0,375 L = 4,5 L/min x 5 s), totales diario y
+  semanal y grafico de evolucion.
