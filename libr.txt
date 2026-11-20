@@ -37,3 +37,21 @@ Proyecto Wokwi: https://wokwi.com/projects/481170206386101249
 5. Telemetria y analitica de operacion. Ciclos de dosificacion, estado del tanque, eventos de proximidad y transiciones de modo. Usuarios: Device Maker. Interfaz: desktop.
 6. Mantenimiento y soporte. Diagnostico remoto y consulta de eventos del dispositivo. Usuarios: equipo de soporte. Interfaz: desktop.
 7. Integracion para developers. API y MQTT para integrar el nodo. Usuarios: developers e integradores. Interfaz: desktop (portal de developers).
+
+
+AquaGrow NutrientDoser Node D1 - Pregunta 1 (version 5 servicios, la que se entrega)
+
+1. Monitoreo del tanque y del sustrato
+Usuario: jardinero. Interfaz: movil (AquaGrow App). Muestra el nivel del tanque en % y mL (capacidad 5000 mL, lleno a 6 cm), el peso de la bandeja en gramos y la proximidad del jardinero a 25 cm o menos. Envia notificacion push cuando el tanque pasa a "Empty" y cuando se reabastece.
+
+2. Dosificacion de nutrientes
+Usuario: jardinero. Interfaz: movil. Muestra el modo del dispositivo (IDLE, DOSING, EMPTY) y el historial de dosificaciones. La dosificacion se activa si el peso es menor a 500 g y hay proximidad, y termina al llegar a 1500 g. Con el tanque vacio, la app muestra el bloqueo del servomotor.
+
+3. Configuracion del dispositivo
+Usuarios: jardinero e integrador. Interfaz: movil y desktop. Permite ajustar la distancia de proximidad (25 cm), la carga minima (500 g), la carga objetivo (1500 g) y la calibracion de la celda de carga y del sensor de nivel.
+
+4. Telemetria y analitica de operacion
+Usuario: Device Maker. Interfaz: desktop (web). Consulta ciclos de dosificacion, estado del tanque, eventos de proximidad y transiciones de modo, con filtros por dispositivo y por fecha.
+
+5. Mantenimiento, soporte e integracion
+Usuarios: equipo de soporte, developers e integradores. Interfaz: desktop (herramienta de soporte y portal de developers). Diagnostico remoto del estado de los sensores y del servomotor, consulta de eventos, y API y MQTT para integrar el nodo.
