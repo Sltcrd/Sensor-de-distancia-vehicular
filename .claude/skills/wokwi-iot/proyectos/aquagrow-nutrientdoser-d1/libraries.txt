@@ -1,0 +1,9 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+ArduinoJson
+MQTT
+Modest-IoT-Nano-Framework
+ESP32Servo
+HX711
+LiquidCrystal I2C

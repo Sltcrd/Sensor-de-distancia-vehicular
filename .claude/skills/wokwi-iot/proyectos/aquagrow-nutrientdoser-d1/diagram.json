@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Antonio Rodrigo Duran Diaz - AquaGrow",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "tank", "top": -170, "left": -60, "attrs": { "distance": "6" } },
+    { "type": "wokwi-hc-sr04", "id": "gardener", "top": -170, "left": 160, "attrs": { "distance": "100" } },
+    { "type": "wokwi-servo", "id": "servo1", "top": -150, "left": 380, "attrs": {} },
+    { "type": "wokwi-hx711", "id": "cell", "top": 220, "left": 0, "attrs": { "type": "5kg" } },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 60, "left": 260, "attrs": { "pins": "i2c" } }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "tank:VCC", "esp:VIN", "red", [] ],
+    [ "tank:GND", "esp:GND.1", "black", [] ],
+    [ "tank:TRIG", "esp:D5", "green", [] ],
+    [ "tank:ECHO", "esp:D18", "blue", [] ],
+    [ "gardener:VCC", "esp:VIN", "red", [] ],
+    [ "gardener:GND", "esp:GND.1", "black", [] ],
+    [ "gardener:TRIG", "esp:D25", "green", [] ],
+    [ "gardener:ECHO", "esp:D26", "blue", [] ],
+    [ "servo1:V+", "esp:VIN", "red", [] ],
+    [ "servo1:GND", "esp:GND.2", "black", [] ],
+    [ "servo1:PWM", "esp:D13", "orange", [] ],
+    [ "cell:VCC", "esp:3V3", "red", [] ],
+    [ "cell:GND", "esp:GND.2", "black", [] ],
+    [ "cell:DT", "esp:D32", "green", [] ],
+    [ "cell:SCK", "esp:D33", "blue", [] ],
+    [ "lcd1:VCC", "esp:VIN", "red", [] ],
+    [ "lcd1:GND", "esp:GND.2", "black", [] ],
+    [ "lcd1:SDA", "esp:D21", "green", [] ],
+    [ "lcd1:SCL", "esp:D22", "blue", [] ]
+  ],
+  "dependencies": {}
+}

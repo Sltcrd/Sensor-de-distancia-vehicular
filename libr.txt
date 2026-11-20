@@ -25,3 +25,15 @@ S5. Seguimiento de consumo
   Interfaz: Movil
   Litros por activacion (aprox. 0,375 L = 4,5 L/min x 5 s), totales diario y
   semanal y grafico de evolucion.
+
+
+AquaGrow NutrientDoser Node D1 - Pregunta 1 (Definition of application service layer requirements)
+Proyecto Wokwi: https://wokwi.com/projects/481170206386101249
+
+1. Monitoreo del tanque y del sustrato. Muestra nivel del tanque (% y mL) y peso de la bandeja (g). Usuarios: jardinero. Interfaz: movil (AquaGrow App).
+2. Dosificacion de nutrientes. Muestra el modo (IDLE, DOSING, EMPTY), el bloqueo por tanque vacio y permite programar o forzar la dosificacion. Usuarios: jardinero. Interfaz: movil.
+3. Alertas de reabastecimiento. Avisa cuando el tanque esta vacio y la dosificacion queda bloqueada. Usuarios: jardinero. Interfaz: movil (notificacion push).
+4. Configuracion del dispositivo. Ajusta umbral de proximidad (25 cm), carga minima (500 g), carga objetivo (1500 g) y calibracion. Usuarios: jardinero e integrador. Interfaz: movil y desktop.
+5. Telemetria y analitica de operacion. Ciclos de dosificacion, estado del tanque, eventos de proximidad y transiciones de modo. Usuarios: Device Maker. Interfaz: desktop.
+6. Mantenimiento y soporte. Diagnostico remoto y consulta de eventos del dispositivo. Usuarios: equipo de soporte. Interfaz: desktop.
+7. Integracion para developers. API y MQTT para integrar el nodo. Usuarios: developers e integradores. Interfaz: desktop (portal de developers).
